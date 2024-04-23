@@ -15,3 +15,9 @@ URL `amqp://guest:guest@localhost:5672` digunakan dalam program *publisher* dan 
 ### Running RabbitMQ as message broker:
 
 ![Running RabbitMQ as message broker](assets/images/RunningRabbitMQ.png)
+
+### Sending and processing event:
+
+![Sending and processing event](assets/images/SendingAndProcessing.png)
+
+Ketika RabbitMQ berjalan dan kita menjalankan *subscriber* dan *publisher* dengan `cargo run`, maka *publisher* akan mengirimkan lima data *event message* ke *message broker* dan *subsciber* akan menerima lima data tersebut.
