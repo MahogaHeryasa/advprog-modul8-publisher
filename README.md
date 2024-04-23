@@ -21,3 +21,9 @@ URL `amqp://guest:guest@localhost:5672` digunakan dalam program *publisher* dan 
 ![Sending and processing event](assets/images/SendingAndProcessing.png)
 
 Ketika RabbitMQ berjalan dan kita menjalankan *subscriber* dan *publisher* dengan `cargo run`, maka *publisher* akan mengirimkan lima data *event message* ke *message broker* dan *subsciber* akan menerima lima data tersebut.
+
+### Monitoring chart based on publisher:
+
+![Monitoring chart based on publisher](assets/images/MonitoringChartPublisher.png)
+
+Grafik *message rate* cenderung lancip dan tinggi ketika saya melakukan beberapa kali `cargo run` dalam rentang waktu yang cepat. Semenetara itu, Grafik *message rate* cenderung landai dan pendek ketika saya melakukan satu kali `cargo run` dalam rentang waktu yang cepat. Hal tersebut menunjukkan bahwa semakin banyak data yang dikirimkan *publisher* ke *message broker* per detik, maka akan semakin tinggi juga *message rate*-nya.    
